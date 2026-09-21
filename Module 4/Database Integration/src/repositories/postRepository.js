@@ -21,7 +21,6 @@ async function create(fields) {
 async function update(id, patch) {
   const existing = await findById(id);
   if (!existing) return null;
-
   return prisma.post.update({
     where: { id: Number(id) },
     data: {
